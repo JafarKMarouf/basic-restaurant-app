@@ -8,3 +8,5 @@ import 'package:uuid/uuid.dart';
 
 part 'models/user_model.dart';
 part 'sources/auth_firebase_service.dart';
+part 'requests/login_user_request.dart';
+part 'repository/auth_repository_impl.dart';

@@ -1,8 +1,12 @@
+import 'package:basic_restaurant_app/data/auth/index.dart';
+import 'package:basic_restaurant_app/domain/auth/index.dart';
 import 'package:basic_restaurant_app/firebase_options.dart';
+import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_it/get_it.dart';
 
 part 'config/app_colors.dart';
 part 'config/app_images.dart';
@@ -12,3 +16,5 @@ part 'constants/app_constant.dart';
 part 'error/failure.dart';
 part 'error/firebase_exception_mapper.dart';
 part 'init/firebase_initializer.dart';
+part 'init/service_locator.dart';
+part 'usecase/usecase.dart';
