@@ -1,0 +1,1 @@
+part 'entity/user_entity.dart';
