@@ -1,6 +1,8 @@
 import 'package:basic_restaurant_app/data/auth/index.dart';
 import 'package:basic_restaurant_app/domain/auth/index.dart';
 import 'package:basic_restaurant_app/firebase_options.dart';
+import 'package:basic_restaurant_app/presentation/auth/index.dart';
+import 'package:basic_restaurant_app/presentation/home/index.dart';
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -18,3 +20,7 @@ part 'error/firebase_exception_mapper.dart';
 part 'init/firebase_initializer.dart';
 part 'init/service_locator.dart';
 part 'usecase/usecase.dart';
+part 'bindings/signin_binding.dart';
+part 'bindings/signup_binding.dart';
+part 'routes/app_pages.dart';
+part 'bindings/home_binding.dart';

@@ -1,18 +1,18 @@
 part of '../index.dart';
 
 abstract class AuthFirebaseService {
-  Future<String> register(StoreUserRequest userRequest);
+  Future<String> signUp(StoreUserRequest userRequest);
 
-  Future<UserEntity> login(LoginUserRequest userRequest);
+  Future<UserEntity> signIn(LoginUserRequest userRequest);
 
-  Future<Either<Failure, void>> logout();
+  Future<Either<Failure, void>> signOut();
 
   Future<Either<Failure, bool>> isLogged();
 }
 
 class AuthFirebaseServiceImpl extends AuthFirebaseService {
   @override
-  Future<String> register(StoreUserRequest userRequest) async {
+  Future<String> signUp(StoreUserRequest userRequest) async {
     final credential = await FirebaseAuth.instance
         .createUserWithEmailAndPassword(
           email: userRequest.email,
@@ -34,7 +34,7 @@ class AuthFirebaseServiceImpl extends AuthFirebaseService {
   }
 
   @override
-  Future<UserEntity> login(LoginUserRequest userRequest) async {
+  Future<UserEntity> signIn(LoginUserRequest userRequest) async {
     UserCredential credential = await FirebaseAuth.instance
         .signInWithEmailAndPassword(
           email: userRequest.email,
@@ -55,7 +55,7 @@ class AuthFirebaseServiceImpl extends AuthFirebaseService {
   }
 
   @override
-  Future<Either<Failure, void>> logout() {
+  Future<Either<Failure, void>> signOut() {
     // TODO: implement logout
     throw UnimplementedError();
   }

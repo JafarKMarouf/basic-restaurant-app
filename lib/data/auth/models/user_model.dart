@@ -5,7 +5,7 @@ class UserModel {
   final String firstName;
   final String lastName;
   final String email;
-  final DateTime createdAt;
+  final Timestamp createdAt;
 
   const UserModel({
     required this.userId,
@@ -21,7 +21,7 @@ class UserModel {
       firstName: json['first_name'] as String,
       lastName: json['last_name'] as String,
       email: json['email_address'] as String,
-      createdAt: json['created_at'] as DateTime,
+      createdAt: json['created_at'] as Timestamp,
     );
   }
 

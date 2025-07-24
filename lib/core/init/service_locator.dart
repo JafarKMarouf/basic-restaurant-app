@@ -10,6 +10,6 @@ Future<void> initializeDependency() async {
   sl.registerSingleton<AuthRepository>(AuthRepositoryImpl());
 
   //-------------------usecases------------------------------------//
-  sl.registerSingleton<RegisterUserCase>(RegisterUserCase());
-  sl.registerSingleton<LoginUseCase>(LoginUseCase());
+  sl.registerSingleton<SignUpUseCase>(SignUpUseCase());
+  sl.registerSingleton<SignInUseCase>(SignInUseCase());
 }

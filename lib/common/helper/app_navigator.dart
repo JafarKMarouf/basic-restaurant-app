@@ -2,6 +2,7 @@ part of '../index.dart';
 
 class AppNavigator {
   static void push(Widget page) {
+
     Get.to(
       page,
       curve: AppConstant.kCurves,

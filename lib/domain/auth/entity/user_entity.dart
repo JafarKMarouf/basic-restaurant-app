@@ -5,7 +5,7 @@ class UserEntity {
   final String? firstName;
   final String? lastName;
   final String? email;
-  final DateTime? createdAt;
+  final Timestamp? createdAt;
 
   const UserEntity({
     this.userId,

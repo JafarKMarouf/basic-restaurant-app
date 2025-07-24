@@ -12,7 +12,4 @@ class AppColors {
   static const Color danger = Color(0xFFEF4444);
   static const Color selectedBtmNavBar = Color(0xff8e6cef);
   static const Color unSelectedBtmNavBar = Colors.white;
-  static const Color adminColor = Color(0xFF10B981);
 }
-
-

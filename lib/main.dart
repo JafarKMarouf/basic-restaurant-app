@@ -1,5 +1,4 @@
 import 'package:basic_restaurant_app/core/index.dart';
-import 'package:basic_restaurant_app/presentation/auth/index.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -19,7 +18,8 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: AppTheme.darkTheme,
-      home: LoginView(),
+      getPages: AppPages.routes,
+      initialRoute: AppPages.signIn,
     );
   }
 }

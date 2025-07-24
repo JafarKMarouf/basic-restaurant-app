@@ -8,11 +8,11 @@ class AuthRepositoryImpl extends AuthRepository {
   }
 
   @override
-  Future<Either<Failure, UserEntity>> login(
+  Future<Either<Failure, UserEntity>> signIn(
     LoginUserRequest userRequest,
   ) async {
     try {
-      UserEntity userEntity = await sl<AuthFirebaseService>().login(
+      UserEntity userEntity = await sl<AuthFirebaseService>().signIn(
         userRequest,
       );
       return Right(userEntity);
@@ -22,15 +22,15 @@ class AuthRepositoryImpl extends AuthRepository {
   }
 
   @override
-  Future<Either<Failure, void>> logout() {
+  Future<Either<Failure, void>> signOut() {
     // TODO: implement logout
     throw UnimplementedError();
   }
 
   @override
-  Future<Either<Failure, String>> register(StoreUserRequest userRequest) async {
+  Future<Either<Failure, String>> signUp(StoreUserRequest userRequest) async {
     try {
-      String result = await sl<AuthFirebaseService>().register(userRequest);
+      String result = await sl<AuthFirebaseService>().signUp(userRequest);
       return Right(result);
     } on Exception catch (e) {
       return Left(FirebaseExceptionMapper.map(e));

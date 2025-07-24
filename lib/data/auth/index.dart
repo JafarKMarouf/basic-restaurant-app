@@ -7,6 +7,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:uuid/uuid.dart';
 
 part 'models/user_model.dart';
-part 'sources/auth_firebase_service.dart';
+part 'repositories/auth_repository_impl.dart';
 part 'requests/login_user_request.dart';
-part 'repository/auth_repository_impl.dart';
+part 'sources/auth_firebase_service.dart';
